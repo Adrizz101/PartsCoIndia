@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Partsco India — Precision Industrial Spare Parts</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="glow glow-tl"></div>
+  <div class="glow glow-br"></div>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <header class="navbar">
+
+    <a href="#" class="brand">
+      PARTSCO <span>INDIA</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#catalog">Catalog</a>
+      <a href="#about">Company</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a
+      class="btn btn-outline"
+      href="tel:+918047546467"
+    >
+      +91-8047546467
+    </a>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-copy">
+
+        <p class="eyebrow">
+          Precision Industrial Spare Parts · Est. 2006 · Kolkata
+        </p>
+
+        <h1>
+          Engineering<br>
+          parts, built for<br>
+          <span class="gold">absolute precision.</span>
+        </h1>
+
+        <p class="hero-desc">
+          Industrial spare parts for bar cutting and bending machinery,
+          supplied by Partsco India since 2006.
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/918047546467?text=Hello%20Partsco%20India%2C%20I%20would%20like%20to%20enquire%20about%20your%20products."
+            target="_blank"
+            rel="noopener"
+          >
+            Enquire on WhatsApp
+          </a>
+
+          <a
+            class="btn btn-ghost"
+            href="#catalog"
+          >
+            View Catalog ↓
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-visual">
+
+        <div class="hero-img-container hero-logo">
+
+          <img
+            src="logo.png"
+            alt="Partsco India company logo"
+          >
+
+        </div>
+
+        <span class="render-tag">
+          PARTSCO INDIA · EST. 2006 · KOLKATA
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats">
+
+      <div class="stat">
+        <span class="num">2006</span>
+        <span class="lbl">Established</span>
+      </div>
+
+      <div class="stat">
+        <span class="num">24</span>
+        <span class="lbl">Products Listed</span>
+      </div>
+
+      <div class="stat">
+        <span class="num">10+</span>
+        <span class="lbl">Product Types</span>
+      </div>
+
+      <div class="stat">
+        <span class="num">GST</span>
+        <span class="lbl">Registered</span>
+      </div>
+
+    </section>
+
+
+    <!-- ================= CATALOG ================= -->
+
+    <section id="catalog" class="catalog">
+
+      <div class="section-head">
+
+        <p class="eyebrow">
+          The Collection
+        </p>
+
+        <h2>
+          Product Catalog
+        </h2>
+
+        <p class="section-description">
+          Browse our industrial spare parts and machinery components.
+          Search by product name, machine, material or component type.
+        </p>
+
+      </div>
+
+
+      <!-- SEARCH -->
+
+      <div class="catalog-controls">
+
+        <div class="search-box">
+
+          <span class="search-icon">⌕</span>
+
+          <input
+            type="search"
+            id="productSearch"
+            placeholder="Search products, machines, materials..."
+            autocomplete="off"
+          >
+
+          <button
+            id="clearSearch"
+            class="clear-search"
+            type="button"
+            aria-label="Clear search"
+          >
+            ×
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- FILTERS -->
+
+      <div
+        class="category-filters"
+        id="categoryFilters"
+      >
+
+        <button
+          class="filter-btn active"
+          data-category="all"
+        >
+          All Products
+        </button>
+
+        <button
+          class="filter-btn"
+          data-category="cutting"
+        >
+          Cutting Blades
+        </button>
+
+        <button
+          class="filter-btn"
+          data-category="pins"
+        >
+          Pins
+        </button>
+
+        <button
+          class="filter-btn"
+          data-category="checking"
+        >
+          Checking Blocks
+        </button>
+
+        <button
+          class="filter-btn"
+          data-category="coupling"
+        >
+          Couplings
+        </button>
+
+        <button
+          class="filter-btn"
+          data-category="connecting"
+        >
+          Connecting Rods
+        </button>
+
+        <button
+          class="filter-btn"
+          data-category="shafts"
+        >
+          Shafts
+        </button>
+
+        <button
+          class="filter-btn"
+          data-category="electrical"
+        >
+          Electricals
+        </button>
+
+        <button
+          class="filter-btn"
+          data-category="machine"
+        >
+          Machine Parts
+        </button>
+
+      </div>
+
+
+      <!-- RESULT COUNT -->
+
+      <div class="catalog-meta">
+
+        <span id="resultCount">
+          Showing 24 products
+        </span>
+
+        <span class="catalog-status">
+          PARTSCO INDIA · INDUSTRIAL COMPONENTS
+        </span>
+
+      </div>
+
+
+      <!-- PRODUCT GRID -->
+
+      <div
+        class="product-grid"
+        id="productGrid"
+      ></div>
+
+
+      <!-- NO RESULTS -->
+
+      <div
+        id="noResults"
+        class="no-results"
+        hidden
+      >
+
+        <div class="no-results-icon">
+          ⌕
+        </div>
+
+        <h3>
+          No matching products
+        </h3>
+
+        <p>
+          Try another product name, machine name or category.
+        </p>
+
+        <button
+          class="btn btn-outline"
+          id="resetSearch"
+        >
+          Reset Search
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= COMPANY ================= -->
+
+    <section id="about" class="about">
+
+      <div class="section-head">
+
+        <p class="eyebrow">
+          The Company
+        </p>
+
+        <h2>
+          Two decades of precision supply
+        </h2>
+
+      </div>
+
+
+      <div class="about-grid">
+
+        <div>
+
+          <p class="about-text">
+
+            Founded in 2006 and run by
+            <strong>Ajay Nayak</strong>,
+            Partsco India is a proprietorship trading,
+            wholesaling and distributing spare parts for
+            bar cutting and bending machinery from
+            Kolkata, West Bengal.
+
+          </p>
+
+          <a
+            class="inline-link"
+            href="#contact"
+          >
+            Request a quotation →
+          </a>
+
+        </div>
+
+
+        <div class="spec-card">
+
+          <div class="spec-row">
+            <span>Legal Status</span>
+            <span>Proprietorship</span>
+          </div>
+
+          <div class="spec-row">
+            <span>Business Type</span>
+            <span>Trader / Wholesaler / Distributor</span>
+          </div>
+
+          <div class="spec-row">
+            <span>Location</span>
+            <span>Kolkata, West Bengal</span>
+          </div>
+
+          <div class="spec-row">
+            <span>Team Size</span>
+            <span>Up to 10 people</span>
+          </div>
+
+          <div class="spec-row">
+            <span>GSTIN</span>
+            <span>19AFBPN8197H1ZW</span>
+          </div>
+
+          <div class="spec-row">
+            <span>HSN Code</span>
+            <span>84314930</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact">
+
+      <div class="contact-card">
+
+        <p class="eyebrow">
+          Direct Enquiry
+        </p>
+
+        <h2>
+          Request a Quote
+        </h2>
+
+        <p>
+          Send us the part name, machine model and quantity.
+          Products marked Price on Request can be quoted to
+          your requirements.
+        </p>
+
+        <div class="contact-actions">
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/918047546467?text=Hello%20Partsco%20India%2C%20I%20would%20like%20to%20request%20a%20quote."
+            target="_blank"
+            rel="noopener"
+          >
+            Chat on WhatsApp
+          </a>
+
+          <a
+            class="btn btn-ghost"
+            href="tel:+918047546467"
+          >
+            Call Us
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer">
+
+    <span>
+      © 2026 Partsco India
+    </span>
+
+    <span>
+      GSTIN 19AFBPN8197H1ZW · HSN 84314930
+    </span>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
