@@ -330,10 +330,6 @@ function createProductCard(product) {
     </div>
   `);
 
-  const whatsappText = encodeURIComponent(
-    `Hello Partsco India, I would like to enquire about ${product.name}.`
-  );
-
   return `
     <article class="product-card">
 
@@ -352,21 +348,19 @@ function createProductCard(product) {
       <div class="product-actions">
 
         <a
-          class="product-enquire"
-          href="https://wa.me/918047546467?text=${whatsappText}"
-          target="_blank"
-          rel="noopener"
-        >
-          Enquire
-        </a>
-
-        <a
-          class="product-view"
+          class="product-enquire im-link"
           href="${escapeHTML(product.url)}"
           target="_blank"
           rel="noopener"
         >
-          View on IndiaMART
+          View on IndiaMART ↗
+        </a>
+
+        <a
+          class="product-call im-link"
+          href="tel:+918047546467"
+        >
+          Call IndiaMART →
         </a>
 
       </div>
@@ -587,6 +581,117 @@ if (scrollProgress) {
     scrollProgress.style.width = pct + "%";
   }, { passive: true });
 }
+
+
+/* =========================================================
+   INDIAMART CONFIRMATION MODAL
+   =========================================================
+   Intercepts clicks on any link with class .im-link
+   (both web links and tel: links). Shows a confirmation
+   modal before proceeding.
+   ========================================================= */
+
+const imModal = document.getElementById("imModal");
+
+let pendingImURL = null;
+let pendingImTarget = null;
+
+function openImModal(url, target) {
+  if (!imModal) return;
+
+  pendingImURL = url;
+  pendingImTarget = target;
+
+  imModal.hidden = false;
+  document.body.style.overflow = "hidden";
+
+  const continueBtn = imModal.querySelector("[data-im-continue]");
+  if (continueBtn) continueBtn.focus();
+}
+
+function closeImModal() {
+  if (!imModal) return;
+
+  imModal.hidden = true;
+  document.body.style.overflow = "";
+
+  pendingImURL = null;
+  pendingImTarget = null;
+}
+
+function proceedImNavigation() {
+
+  if (!pendingImURL) {
+    closeImModal();
+    return;
+  }
+
+  const url = pendingImURL;
+  const target = pendingImTarget;
+
+  closeImModal();
+
+  if (target === "_blank") {
+    window.open(url, "_blank", "noopener,noreferrer");
+  } else {
+    window.location.href = url;
+  }
+}
+
+
+/* =========================================================
+   INTERCEPT IM-LINK CLICKS
+   ========================================================= */
+
+document.addEventListener("click", event => {
+
+  const link = event.target.closest(".im-link");
+  if (!link) return;
+
+  event.preventDefault();
+
+  const url = link.getAttribute("href");
+  const target = link.getAttribute("target") || "";
+
+  if (!url) return;
+
+  openImModal(url, target);
+});
+
+
+/* =========================================================
+   MODAL BUTTON HANDLERS
+   ========================================================= */
+
+if (imModal) {
+
+  imModal.addEventListener("click", event => {
+
+    // Cancel buttons and backdrop
+    if (event.target.closest("[data-im-cancel]")) {
+      event.preventDefault();
+      closeImModal();
+      return;
+    }
+
+    // Continue button
+    if (event.target.closest("[data-im-continue]")) {
+      event.preventDefault();
+      proceedImNavigation();
+    }
+  });
+}
+
+
+/* =========================================================
+   ESCAPE KEY CLOSES MODAL
+   ========================================================= */
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && imModal && !imModal.hidden) {
+    closeImModal();
+  }
+});
 
 
 /* =========================================================
