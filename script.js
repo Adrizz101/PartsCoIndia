@@ -584,11 +584,47 @@ if (scrollProgress) {
 
 
 /* =========================================================
+   MOBILE NAV MENU
+   ========================================================= */
+
+const navToggle = document.getElementById("navToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+function openMobileMenu() {
+  if (!mobileMenu) return;
+  mobileMenu.hidden = false;
+  document.body.style.overflow = "hidden";
+  if (navToggle) navToggle.setAttribute("aria-expanded", "true");
+}
+
+function closeMobileMenu() {
+  if (!mobileMenu) return;
+  mobileMenu.hidden = true;
+  document.body.style.overflow = "";
+  if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+}
+
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    if (mobileMenu && mobileMenu.hidden) {
+      openMobileMenu();
+    } else {
+      closeMobileMenu();
+    }
+  });
+}
+
+if (mobileMenu) {
+  mobileMenu.addEventListener("click", event => {
+    if (event.target.closest("[data-mobile-close]")) {
+      closeMobileMenu();
+    }
+  });
+}
+
+
+/* =========================================================
    INDIAMART CONFIRMATION MODAL
-   =========================================================
-   Intercepts clicks on any link with class .im-link
-   (both web links and tel: links). Shows a confirmation
-   modal before proceeding.
    ========================================================= */
 
 const imModal = document.getElementById("imModal");
@@ -638,11 +674,6 @@ function proceedImNavigation() {
   }
 }
 
-
-/* =========================================================
-   INTERCEPT IM-LINK CLICKS
-   ========================================================= */
-
 document.addEventListener("click", event => {
 
   const link = event.target.closest(".im-link");
@@ -658,23 +689,16 @@ document.addEventListener("click", event => {
   openImModal(url, target);
 });
 
-
-/* =========================================================
-   MODAL BUTTON HANDLERS
-   ========================================================= */
-
 if (imModal) {
 
   imModal.addEventListener("click", event => {
 
-    // Cancel buttons and backdrop
     if (event.target.closest("[data-im-cancel]")) {
       event.preventDefault();
       closeImModal();
       return;
     }
 
-    // Continue button
     if (event.target.closest("[data-im-continue]")) {
       event.preventDefault();
       proceedImNavigation();
@@ -684,12 +708,18 @@ if (imModal) {
 
 
 /* =========================================================
-   ESCAPE KEY CLOSES MODAL
+   GLOBAL ESCAPE KEY HANDLER
    ========================================================= */
 
 document.addEventListener("keydown", event => {
-  if (event.key === "Escape" && imModal && !imModal.hidden) {
+  if (event.key !== "Escape") return;
+
+  if (imModal && !imModal.hidden) {
     closeImModal();
+  }
+
+  if (mobileMenu && !mobileMenu.hidden) {
+    closeMobileMenu();
   }
 });
 
