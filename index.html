@@ -80,11 +80,67 @@
       </a>
     </div>
 
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
 
   </header>
+
+
+  <!-- ================= MOBILE NAV MENU ================= -->
+
+  <div class="mobile-menu" id="mobileMenu" hidden>
+
+    <div class="mobile-menu-backdrop" data-mobile-close></div>
+
+    <div class="mobile-menu-panel">
+
+      <button class="mobile-menu-close" data-mobile-close aria-label="Close menu">
+        ×
+      </button>
+
+      <nav class="mobile-menu-links">
+
+        <a href="#hero" data-mobile-close>Home</a>
+        <a href="#catalog" data-mobile-close>Catalog</a>
+        <a href="#about" data-mobile-close>Company</a>
+        <a href="#why" data-mobile-close>Applications</a>
+        <a href="#contact" data-mobile-close>Contact</a>
+
+        <a
+          href="https://www.indiamart.com/partsco-india/"
+          target="_blank"
+          rel="noopener"
+          class="im-link"
+          data-mobile-close
+        >
+          IndiaMART ↗
+        </a>
+
+      </nav>
+
+      <div class="mobile-menu-actions">
+
+        <a class="mobile-menu-phone im-link" href="tel:+918047546467" data-mobile-close>
+          <span class="mobile-menu-phone-label">IndiaMART · Call</span>
+          <span class="mobile-menu-phone-number">+91 80475 46467</span>
+        </a>
+
+        <a
+          class="btn btn-primary mobile-menu-enquire im-link"
+          href="https://www.indiamart.com/partsco-india/"
+          target="_blank"
+          rel="noopener"
+          data-mobile-close
+        >
+          Enquire ↗
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
 
 
   <main>
