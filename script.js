@@ -1,447 +1,290 @@
+/* =========================================================
+   PRODUCTS
+   =========================================================
+   Part No. and Machine fields are derived from the product
+   name where possible. Where they can't be derived, the
+   field is set to null and hidden on the card.
+   ========================================================= */
+
 const PRODUCTS = [
   {
     id: "27510883830",
     name: "4 Hole Cutting Blade",
     price: "Ask Price",
     dimensions: "Not specified",
+    partNo: null,
+    machine: null,
     category: "cutting",
     categoryName: "Cutting Blades",
-    url: "https://www.indiamart.com/partsco-india/cutting-blade.html#27510883830",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/QI/ZI/QC/3825420/4-hole-cutting-blade-500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/cutting-blade.html#27510883830"
   },
-
   {
     id: "27538191855",
     name: "C52 Bar Cutting Blade",
     price: "Ask Price",
     dimensions: "Not specified",
+    partNo: "C52",
+    machine: null,
     category: "cutting",
     categoryName: "Cutting Blades",
-    url: "https://www.indiamart.com/partsco-india/cutting-blade.html#27538191855",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/ZY/WZ/BH/3825420/c52-bar-cutting-blade-500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/cutting-blade.html#27538191855"
   },
-
   {
     id: "27538191597",
-    name: "Cutting Blade C42 Jaypee (78x58x25)",
+    name: "Cutting Blade C42 Jaypee",
     price: "Ask Price",
-    dimensions: "78x58x25",
+    dimensions: "78 × 58 × 25 mm",
+    partNo: "C42",
+    machine: "Jaypee",
     category: "cutting",
     categoryName: "Cutting Blades",
-    url: "https://www.indiamart.com/partsco-india/cutting-blade.html#27538191597",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/QR/TC/GT/3825420/cutting-blade-c42-jaypee-78x58x25--500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/cutting-blade.html#27538191597"
   },
-
   {
     id: "27538203130",
     name: "Iron Centre Pin",
     price: "Ask Price",
     dimensions: "Not specified",
+    partNo: null,
+    machine: null,
     category: "pins",
     categoryName: "Metal Pins",
-    url: "https://www.indiamart.com/partsco-india/metal-pin.html#27538203130",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/NR/VA/VG/3825420/iron-centre-pin-500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/metal-pin.html#27538203130"
   },
-
   {
     id: "27538206897",
     name: "Mild Steel Square Pin",
     price: "Ask Price",
     dimensions: "Not specified",
+    partNo: null,
+    machine: null,
     category: "pins",
     categoryName: "Metal Pins",
-    url: "https://www.indiamart.com/partsco-india/metal-pin.html#27538206897",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/BU/KH/AZ/3825420/mild-steel-square-pin-500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/metal-pin.html#27538206897"
   },
-
   {
     id: "27538193988",
-    name: "SIGMA DCM 52 (85X85X25) CUTTING BLADE",
-    price: "₹ 1,250/Piece",
-    dimensions: "85X85X25",
+    name: "Sigma DCM 52 Cutting Blade",
+    price: "₹ 1,250 / Piece",
+    dimensions: "85 × 85 × 25 mm",
+    partNo: "DCM 52",
+    machine: "Sigma",
     category: "cutting",
     categoryName: "Cutting Blades",
-    url: "https://www.indiamart.com/partsco-india/metal-pin.html#27538193988",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/VJ/JN/SZ/3825420/whatsapp-image-2022-11-15-at-19-10-36-500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/metal-pin.html#27538193988"
   },
-
   {
     id: "27510818088",
-    name: "Checking Block For Bar Bending Machine",
+    name: "Checking Block for Bar Bending Machine",
     price: "Ask Price",
     dimensions: "Not specified",
+    partNo: null,
+    machine: null,
     category: "checking",
     categoryName: "Checking Blocks",
-    url: "https://www.indiamart.com/partsco-india/checking-block.html#27510818088",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/NT/BU/KK/3825420/whatsapp-image-2022-11-14-at-18-10-07-1--500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/checking-block.html#27510818088"
   },
-
   {
     id: "27538202233",
     name: "Stainless Steel Checking Block",
     price: "Ask Price",
     dimensions: "Not specified",
+    partNo: null,
+    machine: null,
     category: "checking",
     categoryName: "Checking Blocks",
-    url: "https://www.indiamart.com/partsco-india/checking-block.html#27538202233",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/TN/LW/KP/3825420/stainless-steel-checking-block-500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/checking-block.html#27538202233"
   },
-
   {
     id: "27510891633",
     name: "Coupling Nib Support",
     price: "Ask Price",
     dimensions: "Not specified",
+    partNo: null,
+    machine: null,
     category: "coupling",
     categoryName: "Camlock Couplings",
-    url: "https://www.indiamart.com/partsco-india/camlock-coupling.html#27510891633",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/VG/FM/EB/3825420/coupling-nib-support-500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/camlock-coupling.html#27510891633"
   },
-
   {
     id: "27538196573",
     name: "Mild Steel Adopter Coupling",
     price: "Ask Price",
     dimensions: "Not specified",
+    partNo: null,
+    machine: null,
     category: "coupling",
     categoryName: "Camlock Couplings",
-    url: "https://www.indiamart.com/partsco-india/camlock-coupling.html#27538196573",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/ZH/VW/IG/3825420/mild-steel-adopter-coulpling-500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/camlock-coupling.html#27538196573"
   },
-
   {
     id: "27538194691",
     name: "Stainless Steel Bar Cutting Blades",
     price: "Ask Price",
     dimensions: "Not specified",
+    partNo: null,
+    machine: null,
     category: "cutting",
     categoryName: "Cutting Blades",
-    url: "https://www.indiamart.com/partsco-india/cutting-blades.html#27538194691",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/VG/EC/TA/3825420/universal-bar-cutting-blades-500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/cutting-blades.html#27538194691"
   },
-
   {
     id: "27510881488",
-    name: "Coupling cam Sparton Barcutting Machine",
+    name: "Coupling Cam Sparton Bar Cutting Machine",
     price: "Ask Price",
     dimensions: "Not specified",
+    partNo: null,
+    machine: "Spartan",
     category: "coupling",
     categoryName: "Camlock Couplings",
-    url: "https://www.indiamart.com/partsco-india/cutting-blades.html#27510881488",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/AT/AN/OM/3825420/whatsapp-image-2022-11-14-at-18-00-54-500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/cutting-blades.html#27510881488"
   },
-
   {
     id: "27510897712",
     name: "Connecting Rod Bush",
     price: "Ask Price",
     dimensions: "Not specified",
+    partNo: null,
+    machine: null,
     category: "connecting",
     categoryName: "Connecting Rods",
-    url: "https://www.indiamart.com/partsco-india/connecting-rod.html#27510897712",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/MD/OJ/VX/3825420/whatsapp-image-2022-11-14-at-17-54-34-1--500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/connecting-rod.html#27510897712"
   },
-
   {
     id: "27510886291",
     name: "Cast Iron Connecting Rod",
-    price: "₹ 12,500/Piece",
+    price: "₹ 12,500 / Piece",
     dimensions: "Not specified",
+    partNo: null,
+    machine: null,
     category: "connecting",
     categoryName: "Connecting Rods",
-    url: "https://www.indiamart.com/partsco-india/connecting-rod.html#27510886291",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/VB/ZS/FS/3825420/cast-iron-connecting-rod-500x500.jpeg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/connecting-rod.html#27510886291"
   },
-
   {
     id: "27510911148",
     name: "Coupling Nib",
     price: "Ask Price",
     dimensions: "Not specified",
+    partNo: null,
+    machine: null,
     category: "coupling",
     categoryName: "Camlock Couplings",
-    url: "https://www.indiamart.com/partsco-india/reverse-switch.html#27510911148",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/RL/ME/XT/3825420/whatsapp-image-2022-11-14-at-17-52-08-1--500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/reverse-switch.html#27510911148"
   },
-
   {
     id: "27538212330",
     name: "Forward Reverse Switch",
     price: "Ask Price",
     dimensions: "Not specified",
+    partNo: null,
+    machine: null,
     category: "electrical",
     categoryName: "Switches & Electricals",
-    url: "https://www.indiamart.com/partsco-india/reverse-switch.html#27538212330",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/NC/NJ/EZ/3825420/forward-reverse-switch-500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/reverse-switch.html#27538212330"
   },
-
   {
     id: "27510673748",
     name: "Mild Steel Eccentric Shafts",
-    price: "₹ 10,500/Piece",
+    price: "₹ 10,500 / Piece",
     dimensions: "Not specified",
+    partNo: null,
+    machine: null,
     category: "shafts",
     categoryName: "Shafts",
-    url: "https://www.indiamart.com/partsco-india/eccentric-shaft.html#27510673748",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/DX/IV/NQ/3825420/mild-steel-eccentric-shafts-500x500.jpeg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/eccentric-shaft.html#27510673748"
   },
-
   {
     id: "27538204130",
     name: "Mild Steel Dia Mandrel",
     price: "Ask Price",
-    dimensions: "Not specified",
+    dimensions: "50 mm",
+    partNo: "50mm",
+    machine: null,
     category: "machine",
     categoryName: "Machine Parts",
-    url: "https://www.indiamart.com/partsco-india/dia-mandrel.html#27538204130",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/SC/LW/FD/3825420/50mm-dia-mandrel-500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/dia-mandrel.html#27538204130"
   },
-
   {
     id: "27538207548",
     name: "Saddle Adjustment Knob",
     price: "Ask Price",
     dimensions: "Not specified",
+    partNo: null,
+    machine: null,
     category: "machine",
     categoryName: "Machine Parts",
-    url: "https://www.indiamart.com/partsco-india/stainless-steel-knob.html#27538207548",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/CY/LF/CH/3825420/saddle-adjusting-knob-500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/stainless-steel-knob.html#27538207548"
   },
-
   {
     id: "27510944697",
-    name: "Main Gear For C-42 Bar Cutting Machine",
-    price: "₹ 27,500/Piece",
+    name: "Main Gear for C-42 Bar Cutting Machine",
+    price: "₹ 27,500 / Piece",
     dimensions: "Not specified",
+    partNo: "C-42",
+    machine: null,
     category: "machine",
     categoryName: "Machine Parts",
-    url: "https://www.indiamart.com/partsco-india/gear-cutting-machine.html#27510944697",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2023/7/329100896/ZI/BO/JA/3825420/main-gear-for-c-42-bar-cutting-machine-500x500.jpeg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/gear-cutting-machine.html#27510944697"
   },
-
   {
     id: "27538206530",
-    name: "Checking Block For Spartan bar Bending Machine",
+    name: "Checking Block for Spartan Bar Bending Machine",
     price: "Price on Request",
     dimensions: "Not specified",
+    partNo: null,
+    machine: "Spartan",
     category: "checking",
     categoryName: "Checking Blocks",
-    url: "https://www.indiamart.com/partsco-india/bar-cutting-machine.html#27538206530",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/HO/FK/JV/3825420/sparton-bar-bending-machine-500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/bar-cutting-machine.html#27538206530"
   },
-
   {
     id: "27510947262",
-    name: "Shaft Pinion For C-42 Bar Cutting Machine",
+    name: "Shaft Pinion for C-42 Bar Cutting Machine",
     price: "Price on Request",
     dimensions: "Not specified",
+    partNo: "C-42",
+    machine: null,
     category: "shafts",
     categoryName: "Shafts",
-    url: "https://www.indiamart.com/partsco-india/bar-cutting-machine.html#27510947262",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/OZ/WF/HP/3825420/shaft-pinion-for-c-42-bar-cutting-machine-500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/bar-cutting-machine.html#27510947262"
   },
-
   {
     id: "27538213273",
     name: "Emergency Stop Switch",
     price: "Price on Request",
     dimensions: "Not specified",
+    partNo: null,
+    machine: null,
     category: "electrical",
     categoryName: "Switches & Electricals",
-    url: "https://www.indiamart.com/partsco-india/stop-switch.html#27538213273",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/DG/PT/UC/3825420/emergency-stop-switch-500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/stop-switch.html#27538213273"
   },
-
   {
     id: "27538208430",
     name: "Lever Limit Switch",
     price: "Price on Request",
     dimensions: "Not specified",
+    partNo: null,
+    machine: null,
     category: "electrical",
     categoryName: "Switches & Electricals",
-    url: "https://www.indiamart.com/partsco-india/limit-switch.html#27538208430",
-    images: [
-      "https://5.imimg.com/data5/SELLER/Default/2022/11/GC/CN/TW/3825420/lever-limit-switch-500x500.jpg"
-    ]
+    url: "https://www.indiamart.com/partsco-india/limit-switch.html#27538208430"
   }
 ];
 
 
 /* =========================================================
-   PRODUCT IMAGE GALLERY
+   HTML ESCAPE
    ========================================================= */
 
-function getImageHTML(product) {
-
-  const images = Array.isArray(product.images)
-    ? product.images.filter(Boolean).slice(0, 5)
-    : [];
-
-  if (images.length === 0) {
-    return `
-      <div class="product-image">
-        <div class="image-placeholder">
-          <span>Image unavailable</span>
-        </div>
-      </div>
-    `;
-  }
-
-  const mainImage = images[0];
-
-  return `
-    <div class="product-image">
-
-      <div class="main-product-image">
-        <img
-          id="main-image-${product.id}"
-          src="${escapeAttribute(mainImage)}"
-          alt="${escapeAttribute(product.name)}"
-          loading="lazy"
-          onerror="handleImageError(this)"
-        >
-      </div>
-
-      ${
-        images.length > 1
-          ? `
-            <div class="product-thumbnails">
-              ${images.map((image, index) => `
-                <button
-                  type="button"
-                  class="product-thumbnail ${index === 0 ? "active" : ""}"
-                  onclick="changeProductImage('${product.id}', '${escapeAttribute(image)}', this)"
-                  aria-label="View image ${index + 1}"
-                >
-                  <img
-                    src="${escapeAttribute(image)}"
-                    alt="${escapeAttribute(product.name)} image ${index + 1}"
-                    loading="lazy"
-                    onerror="this.style.display='none'"
-                  >
-                </button>
-              `).join("")}
-            </div>
-          `
-          : ""
-      }
-
-    </div>
-  `;
-}
-
-
-/* =========================================================
-   CHANGE MAIN PRODUCT IMAGE
-   ========================================================= */
-
-function changeProductImage(productId, imageURL, thumbnail) {
-
-  const mainImage = document.getElementById(
-    `main-image-${productId}`
-  );
-
-  if (!mainImage) return;
-
-  mainImage.src = imageURL;
-
-  const gallery = thumbnail.closest(".product-thumbnails");
-
-  if (gallery) {
-
-    gallery
-      .querySelectorAll(".product-thumbnail")
-      .forEach(button => {
-        button.classList.remove("active");
-      });
-
-    thumbnail.classList.add("active");
-  }
-}
-
-
-/* =========================================================
-   IMAGE ERROR HANDLER
-   ========================================================= */
-
-function handleImageError(image) {
-
-  const container = image.closest(".product-image");
-
-  if (!container) return;
-
-  image.style.display = "none";
-
-  const placeholder = document.createElement("div");
-
-  placeholder.className = "image-placeholder";
-
-  placeholder.innerHTML = `
-    <span>Image unavailable</span>
-  `;
-
-  container.prepend(placeholder);
-}
-
-
-/* =========================================================
-   ESCAPE HTML ATTRIBUTES
-   ========================================================= */
-
-function escapeAttribute(value) {
-
+function escapeHTML(value) {
   return String(value)
     .replace(/&/g, "&amp;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;")
     .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 
@@ -451,58 +294,80 @@ function escapeAttribute(value) {
 
 function createProductCard(product) {
 
+  const specs = [];
+
+  if (product.partNo) {
+    specs.push(`
+      <div class="spec-item">
+        <span>Part No.</span>
+        <strong>${escapeHTML(product.partNo)}</strong>
+      </div>
+    `);
+  }
+
+  if (product.machine) {
+    specs.push(`
+      <div class="spec-item">
+        <span>Machine</span>
+        <strong>${escapeHTML(product.machine)}</strong>
+      </div>
+    `);
+  }
+
+  if (product.dimensions && product.dimensions !== "Not specified") {
+    specs.push(`
+      <div class="spec-item">
+        <span>Dimensions</span>
+        <strong>${escapeHTML(product.dimensions)}</strong>
+      </div>
+    `);
+  }
+
+  specs.push(`
+    <div class="spec-item">
+      <span>Price</span>
+      <strong class="price">${escapeHTML(product.price)}</strong>
+    </div>
+  `);
+
+  const whatsappText = encodeURIComponent(
+    `Hello Partsco India, I would like to enquire about ${product.name}.`
+  );
+
   return `
     <article class="product-card">
 
-      ${getImageHTML(product)}
+      <div class="product-category">
+        ${escapeHTML(product.categoryName)}
+      </div>
 
-      <div class="product-body">
+      <h3 class="product-name">
+        ${escapeHTML(product.name)}
+      </h3>
 
-        <div class="product-category">
-          ${product.categoryName}
-        </div>
+      <div class="product-specs">
+        ${specs.join("")}
+      </div>
 
-        <h3 class="product-name">
-          ${product.name}
-        </h3>
+      <div class="product-actions">
 
-        <div class="product-specs">
+        <a
+          class="product-enquire"
+          href="https://wa.me/918047546467?text=${whatsappText}"
+          target="_blank"
+          rel="noopener"
+        >
+          Enquire
+        </a>
 
-          <div class="spec-item">
-            <span>Dimensions</span>
-            <strong>${product.dimensions}</strong>
-          </div>
-
-          <div class="spec-item">
-            <span>Price</span>
-            <strong>${product.price}</strong>
-          </div>
-
-        </div>
-
-        <div class="product-actions">
-
-          <a
-            class="btn btn-primary product-enquire"
-            href="https://wa.me/918047546467?text=${encodeURIComponent(
-              `Hello Partsco India, I would like to enquire about ${product.name}.`
-            )}"
-            target="_blank"
-            rel="noopener"
-          >
-            Enquire
-          </a>
-
-          <a
-            class="btn btn-ghost product-view"
-            href="${product.url}"
-            target="_blank"
-            rel="noopener"
-          >
-            View Product
-          </a>
-
-        </div>
+        <a
+          class="product-view"
+          href="${escapeHTML(product.url)}"
+          target="_blank"
+          rel="noopener"
+        >
+          View on IndiaMART
+        </a>
 
       </div>
 
@@ -522,6 +387,7 @@ const resultCount = document.getElementById("resultCount");
 const noResults = document.getElementById("noResults");
 const resetSearch = document.getElementById("resetSearch");
 const categoryFilters = document.getElementById("categoryFilters");
+const categoryGrid = document.getElementById("categoryGrid");
 
 
 /* =========================================================
@@ -538,9 +404,7 @@ let currentSearch = "";
 
 function getFilteredProducts() {
 
-  const searchTerm = currentSearch
-    .trim()
-    .toLowerCase();
+  const searchTerm = currentSearch.trim().toLowerCase();
 
   return PRODUCTS.filter(product => {
 
@@ -548,20 +412,17 @@ function getFilteredProducts() {
       currentCategory === "all" ||
       product.category === currentCategory;
 
-    if (!categoryMatch) {
-      return false;
-    }
-
-    if (!searchTerm) {
-      return true;
-    }
+    if (!categoryMatch) return false;
+    if (!searchTerm) return true;
 
     const searchableText = [
       product.name,
       product.categoryName,
       product.category,
       product.price,
-      product.dimensions
+      product.dimensions,
+      product.partNo || "",
+      product.machine || ""
     ]
       .join(" ")
       .toLowerCase();
@@ -577,25 +438,18 @@ function getFilteredProducts() {
 
 function renderProducts() {
 
-  const filteredProducts = getFilteredProducts();
+  const filtered = getFilteredProducts();
 
-  productGrid.innerHTML = filteredProducts
-    .map(createProductCard)
-    .join("");
+  productGrid.innerHTML = filtered.map(createProductCard).join("");
 
   resultCount.textContent =
-    `Showing ${filteredProducts.length} ${
-      filteredProducts.length === 1
-        ? "product"
-        : "products"
+    `Showing ${filtered.length} ${
+      filtered.length === 1 ? "product" : "products"
     }`;
 
-  noResults.hidden = filteredProducts.length !== 0;
+  noResults.hidden = filtered.length !== 0;
 
-  clearSearch.style.display =
-    currentSearch.length > 0
-      ? "block"
-      : "none";
+  clearSearch.classList.toggle("visible", currentSearch.length > 0);
 }
 
 
@@ -604,25 +458,14 @@ function renderProducts() {
    ========================================================= */
 
 productSearch.addEventListener("input", event => {
-
   currentSearch = event.target.value;
-
   renderProducts();
 });
 
-
-/* =========================================================
-   CLEAR SEARCH
-   ========================================================= */
-
 clearSearch.addEventListener("click", () => {
-
   productSearch.value = "";
-
   currentSearch = "";
-
   renderProducts();
-
   productSearch.focus();
 });
 
@@ -632,22 +475,15 @@ clearSearch.addEventListener("click", () => {
    ========================================================= */
 
 categoryFilters.addEventListener("click", event => {
-
   const button = event.target.closest(".filter-btn");
-
   if (!button) return;
 
   document
     .querySelectorAll(".filter-btn")
-    .forEach(btn => {
-      btn.classList.remove("active");
-    });
+    .forEach(btn => btn.classList.remove("active"));
 
   button.classList.add("active");
-
-  currentCategory =
-    button.dataset.category;
-
+  currentCategory = button.dataset.category;
   renderProducts();
 });
 
@@ -657,34 +493,105 @@ categoryFilters.addEventListener("click", event => {
    ========================================================= */
 
 resetSearch.addEventListener("click", () => {
-
   productSearch.value = "";
-
   currentSearch = "";
-
   currentCategory = "all";
 
   document
     .querySelectorAll(".filter-btn")
-    .forEach(button => {
-      button.classList.remove("active");
-    });
+    .forEach(button => button.classList.remove("active"));
 
-  const allButton =
-    document.querySelector(
-      '.filter-btn[data-category="all"]'
-    );
-
-  if (allButton) {
-    allButton.classList.add("active");
-  }
+  const allButton = document.querySelector('.filter-btn[data-category="all"]');
+  if (allButton) allButton.classList.add("active");
 
   renderProducts();
 });
 
 
 /* =========================================================
-   INITIAL RENDER
+   CATEGORY GRID
    ========================================================= */
 
+const CATEGORY_LABELS = {
+  cutting: "Cutting Blades",
+  pins: "Pins",
+  checking: "Checking Blocks",
+  coupling: "Couplings",
+  connecting: "Connecting Rods",
+  shafts: "Shafts",
+  electrical: "Electricals",
+  machine: "Machine Parts"
+};
+
+function buildCategoryGrid() {
+
+  if (!categoryGrid) return;
+
+  const counts = {};
+  PRODUCTS.forEach(p => {
+    counts[p.category] = (counts[p.category] || 0) + 1;
+  });
+
+  categoryGrid.innerHTML = Object.entries(CATEGORY_LABELS)
+    .filter(([key]) => counts[key])
+    .map(([key, label]) => `
+      <button
+        type="button"
+        class="category-tile"
+        data-category="${key}"
+      >
+        <span class="category-name">${label}</span>
+        <span class="category-count">
+          ${counts[key]} ${counts[key] === 1 ? "product" : "products"}
+        </span>
+      </button>
+    `)
+    .join("");
+
+  categoryGrid.addEventListener("click", event => {
+    const tile = event.target.closest(".category-tile");
+    if (!tile) return;
+
+    const category = tile.dataset.category;
+
+    document
+      .querySelectorAll(".filter-btn")
+      .forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.category === category);
+      });
+
+    currentCategory = category;
+    productSearch.value = "";
+    currentSearch = "";
+
+    renderProducts();
+
+    document
+      .getElementById("catalog")
+      .scrollIntoView({ behavior: "smooth" });
+  });
+}
+
+
+/* =========================================================
+   SCROLL PROGRESS
+   ========================================================= */
+
+const scrollProgress = document.getElementById("scrollProgress");
+
+if (scrollProgress) {
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    scrollProgress.style.width = pct + "%";
+  }, { passive: true });
+}
+
+
+/* =========================================================
+   INIT
+   ========================================================= */
+
+buildCategoryGrid();
 renderProducts();
