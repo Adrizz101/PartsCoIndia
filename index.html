@@ -6,11 +6,13 @@
 
   <title>Partsco India — Precision Industrial Spare Parts</title>
 
+  <meta name="description" content="Industrial spare parts for bar cutting and bending machinery. Supplied by Partsco India, Kolkata, since 2006. Cutting blades, pins, couplings, gears, shafts and electricals.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,600;0,700;0,800;1,400;1,600&display=swap"
     rel="stylesheet"
   >
 
@@ -18,6 +20,8 @@
 </head>
 
 <body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <div class="glow glow-tl"></div>
   <div class="glow glow-br"></div>
@@ -27,17 +31,18 @@
   <header class="navbar">
 
     <a href="#" class="brand">
-      PARTSCO <span>INDIA</span>
+      <img src="logo.png" alt="Partsco India" class="brand-logo">
     </a>
 
     <nav class="nav-links">
       <a href="#catalog">Catalog</a>
+      <a href="#featured">Featured</a>
       <a href="#about">Company</a>
       <a href="#contact">Contact</a>
     </nav>
 
     <a
-      class="btn btn-outline"
+      class="btn btn-outline nav-phone"
       href="tel:+918047546467"
     >
       +91-8047546467
@@ -46,27 +51,36 @@
   </header>
 
 
-  <!-- ================= HERO ================= -->
-
   <main>
+
+    <!-- ================= HERO ================= -->
 
     <section class="hero">
 
+      <span class="hero-streak hero-streak-1" aria-hidden="true"></span>
+      <span class="hero-streak hero-streak-2" aria-hidden="true"></span>
+
       <div class="hero-copy">
 
-        <p class="eyebrow">
-          Precision Industrial Spare Parts · Est. 2006 · Kolkata
+        <p class="hero-meta">
+          <span>Est. 2006</span>
+          <span class="dot">·</span>
+          <span>Kolkata</span>
+          <span class="dot">·</span>
+          <span>GST Verified</span>
         </p>
 
-        <h1>
-          Engineering<br>
-          parts, built for<br>
-          <span class="gold">absolute precision.</span>
+        <h1 class="hero-title">
+          <span class="tone-bold">Engineering</span><br>
+          <span class="tone-italic">parts, built for</span><br>
+          <span class="tone-bold">absolute</span>
+          <span class="tone-bold gold">precision.</span>
         </h1>
 
         <p class="hero-desc">
-          Industrial spare parts for bar cutting and bending machinery,
-          supplied by Partsco India since 2006.
+          Industrial spare parts for bar cutting and bending machinery.
+          Supplied by Partsco India from Kolkata since 2006 — trusted by
+          rebar fabrication units across India.
         </p>
 
         <div class="hero-actions">
@@ -80,10 +94,7 @@
             Enquire on WhatsApp
           </a>
 
-          <a
-            class="btn btn-ghost"
-            href="#catalog"
-          >
+          <a class="btn btn-ghost" href="#catalog">
             View Catalog ↓
           </a>
 
@@ -94,18 +105,18 @@
 
       <div class="hero-visual">
 
-        <div class="hero-img-container hero-logo">
-
+        <div class="hero-img-stage">
           <img
-            src="logo.png"
-            alt="Partsco India company logo"
+            src="https://5.imimg.com/data5/SELLER/Default/2022/11/QR/TC/GT/3825420/cutting-blade-c42-jaypee-78x58x25--500x500.jpg"
+            alt="C42 Jaypee industrial cutting blade"
           >
-
         </div>
 
-        <span class="render-tag">
-          PARTSCO INDIA · EST. 2006 · KOLKATA
-        </span>
+        <div class="hero-caption">
+          <span class="hero-caption-eyebrow">Signature Component</span>
+          <span class="hero-caption-name">C42 Jaypee Cutting Blade</span>
+          <span class="hero-caption-spec">78 × 58 × 25 mm</span>
+        </div>
 
       </div>
 
@@ -128,12 +139,28 @@
 
       <div class="stat">
         <span class="num">10+</span>
-        <span class="lbl">Product Types</span>
+        <span class="lbl">Component Types</span>
       </div>
 
       <div class="stat">
-        <span class="num">GST</span>
-        <span class="lbl">Registered</span>
+        <span class="num">Pan-India</span>
+        <span class="lbl">Dispatch</span>
+      </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORY TILES ================= -->
+
+    <section class="categories">
+
+      <div class="section-head">
+        <p class="eyebrow">Browse by Category</p>
+        <h2>Component Range</h2>
+      </div>
+
+      <div class="category-grid" id="categoryGrid">
+        <!-- populated by script.js -->
       </div>
 
     </section>
@@ -144,219 +171,138 @@
     <section id="catalog" class="catalog">
 
       <div class="section-head">
-
-        <p class="eyebrow">
-          The Collection
-        </p>
-
-        <h2>
-          Product Catalog
-        </h2>
-
+        <p class="eyebrow">The Collection</p>
+        <h2>Product Catalog</h2>
         <p class="section-description">
           Browse our industrial spare parts and machinery components.
           Search by product name, machine, material or component type.
         </p>
-
       </div>
 
 
-      <!-- SEARCH -->
-
       <div class="catalog-controls">
-
         <div class="search-box">
-
           <span class="search-icon">⌕</span>
-
           <input
             type="search"
             id="productSearch"
             placeholder="Search products, machines, materials..."
             autocomplete="off"
           >
-
           <button
             id="clearSearch"
             class="clear-search"
             type="button"
             aria-label="Clear search"
-          >
-            ×
-          </button>
-
+          >×</button>
         </div>
-
       </div>
 
 
-      <!-- FILTERS -->
+      <div class="category-filters" id="categoryFilters">
 
-      <div
-        class="category-filters"
-        id="categoryFilters"
-      >
-
-        <button
-          class="filter-btn active"
-          data-category="all"
-        >
-          All Products
-        </button>
-
-        <button
-          class="filter-btn"
-          data-category="cutting"
-        >
-          Cutting Blades
-        </button>
-
-        <button
-          class="filter-btn"
-          data-category="pins"
-        >
-          Pins
-        </button>
-
-        <button
-          class="filter-btn"
-          data-category="checking"
-        >
-          Checking Blocks
-        </button>
-
-        <button
-          class="filter-btn"
-          data-category="coupling"
-        >
-          Couplings
-        </button>
-
-        <button
-          class="filter-btn"
-          data-category="connecting"
-        >
-          Connecting Rods
-        </button>
-
-        <button
-          class="filter-btn"
-          data-category="shafts"
-        >
-          Shafts
-        </button>
-
-        <button
-          class="filter-btn"
-          data-category="electrical"
-        >
-          Electricals
-        </button>
-
-        <button
-          class="filter-btn"
-          data-category="machine"
-        >
-          Machine Parts
-        </button>
+        <button class="filter-btn active" data-category="all">All Products</button>
+        <button class="filter-btn" data-category="cutting">Cutting Blades</button>
+        <button class="filter-btn" data-category="pins">Pins</button>
+        <button class="filter-btn" data-category="checking">Checking Blocks</button>
+        <button class="filter-btn" data-category="coupling">Couplings</button>
+        <button class="filter-btn" data-category="connecting">Connecting Rods</button>
+        <button class="filter-btn" data-category="shafts">Shafts</button>
+        <button class="filter-btn" data-category="electrical">Electricals</button>
+        <button class="filter-btn" data-category="machine">Machine Parts</button>
 
       </div>
 
-
-      <!-- RESULT COUNT -->
 
       <div class="catalog-meta">
-
-        <span id="resultCount">
-          Showing 24 products
-        </span>
-
-        <span class="catalog-status">
-          PARTSCO INDIA · INDUSTRIAL COMPONENTS
-        </span>
-
+        <span id="resultCount">Showing 24 products</span>
+        <span class="catalog-status">Partsco India · Industrial Components</span>
       </div>
 
 
-      <!-- PRODUCT GRID -->
-
-      <div
-        class="product-grid"
-        id="productGrid"
-      ></div>
+      <div class="product-grid" id="productGrid"></div>
 
 
-      <!-- NO RESULTS -->
+      <div id="noResults" class="no-results" hidden>
+        <div class="no-results-icon">⌕</div>
+        <h3>No matching products</h3>
+        <p>Try another product name, machine name or category.</p>
+        <button class="btn btn-outline" id="resetSearch">Reset Search</button>
+      </div>
 
-      <div
-        id="noResults"
-        class="no-results"
-        hidden
-      >
+    </section>
 
-        <div class="no-results-icon">
-          ⌕
+
+    <!-- ================= WHY PARTSCO ================= -->
+
+    <section class="why">
+
+      <div class="section-head">
+        <p class="eyebrow">Why Partsco</p>
+        <h2>Built on two decades of supply</h2>
+      </div>
+
+      <div class="why-grid">
+
+        <div class="why-card">
+          <span class="why-num">01</span>
+          <h3>Original Specifications</h3>
+          <p>Components machined to OEM tolerances for C-42, C-52, Jaypee, Spartan, and Sigma DCM bar cutting and bending machines.</p>
         </div>
 
-        <h3>
-          No matching products
-        </h3>
+        <div class="why-card">
+          <span class="why-num">02</span>
+          <h3>Direct Enquiry</h3>
+          <p>Send us the part name, machine model, and quantity. Products marked "Price on Request" are quoted to your requirement.</p>
+        </div>
 
-        <p>
-          Try another product name, machine name or category.
-        </p>
+        <div class="why-card">
+          <span class="why-num">03</span>
+          <h3>Verified Business</h3>
+          <p>GSTIN 19AFBPN8197H1ZW · HSN 84314930. A proprietorship firm operating from Kolkata, West Bengal since 2006.</p>
+        </div>
 
-        <button
-          class="btn btn-outline"
-          id="resetSearch"
-        >
-          Reset Search
-        </button>
+        <div class="why-card">
+          <span class="why-num">04</span>
+          <h3>Pan-India Dispatch</h3>
+          <p>Parts dispatched across India. Local pickup available in Kolkata. Contact us for dispatch timelines on specific items.</p>
+        </div>
 
       </div>
 
     </section>
 
 
-    <!-- ================= COMPANY ================= -->
+    <!-- ================= ABOUT ================= -->
 
     <section id="about" class="about">
 
       <div class="section-head">
-
-        <p class="eyebrow">
-          The Company
-        </p>
-
-        <h2>
-          Two decades of precision supply
-        </h2>
-
+        <p class="eyebrow">The Company</p>
+        <h2>Two decades of precision supply</h2>
       </div>
-
 
       <div class="about-grid">
 
         <div>
-
           <p class="about-text">
-
-            Founded in 2006 and run by
-            <strong>Ajay Nayak</strong>,
-            Partsco India is a proprietorship trading,
-            wholesaling and distributing spare parts for
-            bar cutting and bending machinery from
-            Kolkata, West Bengal.
-
+            Founded in 2006 and run by <strong>Ajay Nayak</strong>,
+            Partsco India is a proprietorship trading, wholesaling and
+            distributing spare parts for bar cutting and bending machinery
+            from Kolkata, West Bengal.
           </p>
 
-          <a
-            class="inline-link"
-            href="#contact"
-          >
+          <p class="about-text">
+            Every product we list is a component we know intimately — the
+            blades, pins, checking blocks, couplings, connecting rods,
+            shafts, and electricals that keep rebar fabrication running.
+            Buyers get real parts, real specs, and a direct line to the
+            person who knows the machine.
+          </p>
+
+          <a class="inline-link" href="#contact">
             Request a quotation →
           </a>
-
         </div>
 
 
@@ -369,12 +315,17 @@
 
           <div class="spec-row">
             <span>Business Type</span>
-            <span>Trader / Wholesaler / Distributor</span>
+            <span>Trader · Wholesaler · Distributor</span>
           </div>
 
           <div class="spec-row">
             <span>Location</span>
             <span>Kolkata, West Bengal</span>
+          </div>
+
+          <div class="spec-row">
+            <span>Established</span>
+            <span>2006</span>
           </div>
 
           <div class="spec-row">
@@ -405,18 +356,13 @@
 
       <div class="contact-card">
 
-        <p class="eyebrow">
-          Direct Enquiry
-        </p>
-
-        <h2>
-          Request a Quote
-        </h2>
+        <p class="eyebrow">Direct Enquiry</p>
+        <h2>Request a Quote</h2>
 
         <p>
-          Send us the part name, machine model and quantity.
-          Products marked Price on Request can be quoted to
-          your requirements.
+          Send us the part name, machine model, and quantity.
+          Products marked "Price on Request" can be quoted to your
+          requirements.
         </p>
 
         <div class="contact-actions">
@@ -430,10 +376,7 @@
             Chat on WhatsApp
           </a>
 
-          <a
-            class="btn btn-ghost"
-            href="tel:+918047546467"
-          >
+          <a class="btn btn-ghost" href="tel:+918047546467">
             Call Us
           </a>
 
@@ -446,17 +389,37 @@
   </main>
 
 
+  <!-- ================= FLOATING WHATSAPP ================= -->
+
+  <a
+    class="float-whatsapp"
+    href="https://wa.me/918047546467?text=Hello%20Partsco%20India%2C%20I%20would%20like%20to%20enquire."
+    target="_blank"
+    rel="noopener"
+    aria-label="Enquire on WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+      <path d="M20.5 3.5A11 11 0 0 0 3.3 17.2L2 22l5-1.3A11 11 0 1 0 20.5 3.5Zm-8.4 17a9 9 0 0 1-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A9 9 0 1 1 12 20.5Zm5-6.7c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.2s-.8.9-1 1.1-.4.2-.7.1a7 7 0 0 1-2-1.3 7.6 7.6 0 0 1-1.4-1.8c-.1-.3 0-.4.1-.6l.5-.6c.1-.2.2-.3.3-.5s0-.4 0-.5-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.6 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.9c2.1.8 2.6.9 3.5.8a3.3 3.3 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.4Z"/>
+    </svg>
+  </a>
+
+
   <!-- ================= FOOTER ================= -->
 
   <footer class="footer">
 
-    <span>
-      © 2026 Partsco India
-    </span>
+    <div class="footer-main">
+      <span class="footer-brand">Partsco India</span>
+      <span>© 2026 Partsco India</span>
+      <span>GSTIN 19AFBPN8197H1ZW · HSN 84314930</span>
+    </div>
 
-    <span>
-      GSTIN 19AFBPN8197H1ZW · HSN 84314930
-    </span>
+    <p class="footer-disclaimer">
+      Product information and thumbnails are sourced from Partsco India's
+      own listings and are shown here for catalog reference only. Full
+      specifications, pricing and enquiries are handled directly on IndiaMART
+      or via WhatsApp. Product availability and pricing are subject to change.
+    </p>
 
   </footer>
 
