@@ -968,4 +968,75 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; letter-spacing
 }
 
 .im-modal-card::before {
-  content
+  content: "";
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 80px; height: 1px;
+  background: var(--gold);
+}
+
+.im-modal-eyebrow {
+  display: inline-block;
+  color: var(--gold);
+  font-size: .64rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.im-modal-title {
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 14px;
+  letter-spacing: -.005em;
+}
+
+.im-modal-text {
+  color: var(--grey);
+  font-size: .88rem;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.im-modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.im-modal-actions .btn {
+  padding: 12px 22px;
+  font-size: .68rem;
+}
+
+@media (max-width: 500px) {
+  .im-modal-card { padding: 36px 26px 28px; }
+  .im-modal-actions { flex-direction: column-reverse; }
+  .im-modal-actions .btn { width: 100%; }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  section { padding: 70px 5vw; }
+  .hero { padding-top: 70px; padding-bottom: 70px; }
+  .hero-title { font-size: clamp(2.2rem, 9vw, 3.2rem); }
+  .hero-meta { font-size: .6rem; letter-spacing: .18em; }
+  .product-grid { grid-template-columns: 1fr; }
+  .category-tile { padding: 20px 16px 16px; min-height: 100px; }
+  .stat { padding: 24px 5vw; }
+  .stat .num { font-size: 1.2rem; }
+  .buy-im-card { padding: 50px 6vw; }
+  .why { padding: 80px 5vw; }
+  .find-info { padding: 26px 22px; gap: 20px; }
+  .find-map, .find-photo { min-height: 260px; }
+  .find-map iframe { min-height: 260px; }
+  .footer { padding: 50px 5vw 24px; }
+}
