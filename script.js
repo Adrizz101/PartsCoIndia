@@ -688,3 +688,113 @@ resetSearch.addEventListener("click", () => {
    ========================================================= */
 
 renderProducts();
+/* =========================================================
+   CATEGORY GRID
+   ========================================================= */
+
+const CATEGORY_ICONS = {
+  cutting:
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12h18M6 8l-3 4 3 4M18 8l3 4-3 4M12 4v16"/></svg>',
+  pins:
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="7" r="3"/><path d="M12 10v11M9 21h6"/></svg>',
+  checking:
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="9" width="18" height="6" rx="1"/><path d="M6 9V6M18 9V6M6 18v-3M18 18v-3"/></svg>',
+  coupling:
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="7" cy="12" r="4"/><circle cx="17" cy="12" r="4"/><path d="M11 12h2"/></svg>',
+  connecting:
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="6" cy="12" r="3"/><circle cx="18" cy="12" r="3"/><path d="M9 12h6"/></svg>',
+  shafts:
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12h18"/><circle cx="3" cy="12" r="1.6"/><circle cx="21" cy="12" r="1.6"/><path d="M8 9v6M16 9v6"/></svg>',
+  electrical:
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>',
+  machine:
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg>'
+};
+
+const CATEGORY_LABELS = {
+  cutting: "Cutting Blades",
+  pins: "Pins",
+  checking: "Checking Blocks",
+  coupling: "Couplings",
+  connecting: "Connecting Rods",
+  shafts: "Shafts",
+  electrical: "Electricals",
+  machine: "Machine Parts"
+};
+
+function buildCategoryGrid() {
+
+  const grid = document.getElementById("categoryGrid");
+  if (!grid) return;
+
+  const counts = {};
+
+  PRODUCTS.forEach(p => {
+    counts[p.category] = (counts[p.category] || 0) + 1;
+  });
+
+  grid.innerHTML = Object.entries(CATEGORY_LABELS)
+    .filter(([key]) => counts[key])
+    .map(([key, label]) => `
+      <button
+        type="button"
+        class="category-tile"
+        data-category="${key}"
+      >
+        <span class="category-icon">${CATEGORY_ICONS[key] || ""}</span>
+        <span class="category-name">${label}</span>
+        <span class="category-count">${counts[key]} ${counts[key] === 1 ? "product" : "products"}</span>
+      </button>
+    `)
+    .join("");
+
+  grid.addEventListener("click", event => {
+
+    const tile = event.target.closest(".category-tile");
+    if (!tile) return;
+
+    const category = tile.dataset.category;
+
+    // Sync filter buttons
+    document
+      .querySelectorAll(".filter-btn")
+      .forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.category === category);
+      });
+
+    currentCategory = category;
+
+    // Also clear search so results aren't empty unexpectedly
+    productSearch.value = "";
+    currentSearch = "";
+
+    renderProducts();
+
+    document
+      .getElementById("catalog")
+      .scrollIntoView({ behavior: "smooth" });
+  });
+}
+
+
+/* =========================================================
+   SCROLL PROGRESS
+   ========================================================= */
+
+const scrollProgress = document.getElementById("scrollProgress");
+
+if (scrollProgress) {
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    scrollProgress.style.width = pct + "%";
+  }, { passive: true });
+}
+
+
+/* =========================================================
+   INIT EXTRA
+   ========================================================= */
+
+buildCategoryGrid();
