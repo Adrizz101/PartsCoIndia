@@ -191,6 +191,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; letter-spacing
   letter-spacing: .14em; text-transform: uppercase;
   cursor: pointer;
   transition: all .25s ease;
+  font-family: var(--font-body);
 }
 .btn:hover { transform: translateY(-1px); }
 .btn-primary { background: var(--gold); color: #111; }
@@ -316,6 +317,8 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; letter-spacing
   text-align: left;
   min-height: 120px;
   display: flex; flex-direction: column; justify-content: flex-end;
+  font-family: var(--font-body);
+  color: var(--white);
 }
 .category-tile::before {
   content: "";
@@ -425,6 +428,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; letter-spacing
   letter-spacing: .12em; text-transform: uppercase;
   cursor: pointer;
   transition: all .22s ease;
+  font-family: var(--font-body);
 }
 .filter-btn:hover { border-color: rgba(201,162,75,.45); color: var(--white); }
 .filter-btn.active {
@@ -964,9 +968,4 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; letter-spacing
 }
 
 .im-modal-card::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 50%;
-  transform: translateX(-50%);
-  width: 80px; height: 1px;
-  background
+  content
