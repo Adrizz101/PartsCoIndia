@@ -688,55 +688,97 @@ section { padding: 100px 6vw; }
 
 .buy-im-card {
   position: relative;
-  max-width: 860px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 70px 6vw;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 0;
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 8px;
   box-shadow: var(--shadow-md);
-  text-align: center;
+  overflow: hidden;
 }
 .buy-im-card::before {
   content: "";
   position: absolute;
-  top: 0; left: 50%;
-  transform: translateX(-50%);
-  width: 80px; height: 2px;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
   background: var(--orange);
-  border-radius: 2px;
+  z-index: 2;
+}
+
+.buy-im-image {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-soft);
+  min-height: 460px;
+}
+.buy-im-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.buy-im-content {
+  padding: 70px 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .buy-im-card h2 {
-  font-size: clamp(1.6rem, 3.4vw, 2.3rem);
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
   line-height: 1.15;
   text-transform: uppercase;
-  margin: 0 auto 18px;
-  max-width: 26ch;
+  margin-bottom: 18px;
+  max-width: 24ch;
 }
 .buy-im-desc {
   max-width: 55ch;
-  margin: 0 auto 30px;
+  margin-bottom: 26px;
   color: var(--text-2);
+  font-size: .96rem;
 }
 
 .buy-im-points {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 10px;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 .buy-im-point {
-  padding: 8px 16px;
+  padding: 8px 14px;
   border: 1px solid var(--border-strong);
   border-radius: 999px;
   color: var(--text-2);
-  font-size: .66rem;
+  font-size: .62rem;
   font-weight: 600;
   letter-spacing: .16em;
   text-transform: uppercase;
   background: #fff;
+}
+
+.buy-im-content .btn {
+  align-self: flex-start;
+}
+
+@media (max-width: 900px) {
+  .buy-im-card {
+    grid-template-columns: 1fr;
+  }
+  .buy-im-image {
+    min-height: 260px;
+    max-height: 300px;
+  }
+  .buy-im-content {
+    padding: 50px 6vw 60px;
+  }
+  .buy-im-content .btn {
+    align-self: stretch;
+    justify-content: center;
+  }
 }
 
 /* ================= WHY ================= */
