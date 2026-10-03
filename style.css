@@ -890,39 +890,10 @@ section { padding: 100px 6vw; }
   text-align: right;
 }
 
-/* About image — full width, industrial, warm-toned */
-.about-image {
-  position: relative;
-  width: 100%;
-  height: 380px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-}
-.about-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(0.95) contrast(1.02) sepia(0.06);
-  transition: transform .6s ease;
-}
-.about-image:hover img { transform: scale(1.03); }
 
-.about-image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    transparent 40%,
-    rgba(232, 93, 42, 0.14) 100%
-  );
-  pointer-events: none;
-}
 
 @media (max-width: 860px) {
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .about-image { height: 280px; }
 }
 
 /* ================= FIND US ================= */
