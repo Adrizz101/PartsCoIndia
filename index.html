@@ -23,34 +23,19 @@
 <body>
 
   <div class="scroll-progress" id="scrollProgress"></div>
-  <div class="glow glow-tl"></div>
-  <div class="glow glow-br"></div>
 
   <!-- ================= NAVBAR ================= -->
 
   <header class="navbar">
 
     <a href="#" class="brand">
-      <img src="logo.png" alt="Partsco India" class="brand-logo">
+      <span class="brand-logo-wrap">
+        <img src="logo.png" alt="Partsco India" class="brand-logo">
+      </span>
     </a>
 
     <nav class="nav-links">
-
       <a href="#hero">Home</a>
-
-      <div class="nav-drop">
-        <a href="#catalog">Catalog <span class="caret">⌄</span></a>
-        <div class="nav-drop-menu">
-          <a href="#catalog">Cutting Blades</a>
-          <a href="#catalog">Pins</a>
-          <a href="#catalog">Checking Blocks</a>
-          <a href="#catalog">Couplings</a>
-          <a href="#catalog">Connecting Rods</a>
-          <a href="#catalog">Shafts</a>
-          <a href="#catalog">Electricals</a>
-          <a href="#catalog">Machine Parts</a>
-        </div>
-      </div>
 
       <div class="nav-drop">
         <a href="#about">Company <span class="caret">⌄</span></a>
@@ -64,85 +49,22 @@
       <a href="#why">Applications</a>
       <a href="https://www.indiamart.com/partsco-india/" target="_blank" rel="noopener" class="im-link">IndiaMART ↗</a>
       <a href="#contact">Contact</a>
-
     </nav>
 
     <div class="nav-right">
       <a class="nav-phone im-link" href="tel:+918047546467">
-        <span class="nav-phone-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.7.6 2.5a2 2 0 0 1-.5 2.1L8 9.5a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.6.5 2.5.6a2 2 0 0 1 1.7 2Z"/>
-          </svg>
-        </span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.7.6 2.5a2 2 0 0 1-.5 2.1L8 9.5a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.6.5 2.5.6a2 2 0 0 1 1.7 2Z"/>
+        </svg>
         +91 80475 46467
       </a>
 
-      <a class="nav-wa im-link" href="https://www.indiamart.com/partsco-india/" target="_blank" rel="noopener">
+      <a class="btn btn-primary nav-enquire im-link" href="https://www.indiamart.com/partsco-india/" target="_blank" rel="noopener">
         Enquire ↗
       </a>
     </div>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
   </header>
-
-
-  <!-- ================= MOBILE NAV MENU ================= -->
-
-  <div class="mobile-menu" id="mobileMenu" hidden>
-
-    <div class="mobile-menu-backdrop" data-mobile-close></div>
-
-    <div class="mobile-menu-panel">
-
-      <button class="mobile-menu-close" data-mobile-close aria-label="Close menu">
-        ×
-      </button>
-
-      <nav class="mobile-menu-links">
-
-        <a href="#hero" data-mobile-close>Home</a>
-        <a href="#catalog" data-mobile-close>Catalog</a>
-        <a href="#about" data-mobile-close>Company</a>
-        <a href="#why" data-mobile-close>Applications</a>
-        <a href="#contact" data-mobile-close>Contact</a>
-
-        <a
-          href="https://www.indiamart.com/partsco-india/"
-          target="_blank"
-          rel="noopener"
-          class="im-link"
-          data-mobile-close
-        >
-          IndiaMART ↗
-        </a>
-
-      </nav>
-
-      <div class="mobile-menu-actions">
-
-        <a class="mobile-menu-phone im-link" href="tel:+918047546467" data-mobile-close>
-          <span class="mobile-menu-phone-label">IndiaMART · Call</span>
-          <span class="mobile-menu-phone-number">+91 80475 46467</span>
-        </a>
-
-        <a
-          class="btn btn-primary mobile-menu-enquire im-link"
-          href="https://www.indiamart.com/partsco-india/"
-          target="_blank"
-          rel="noopener"
-          data-mobile-close
-        >
-          Enquire ↗
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
 
 
   <main>
@@ -150,9 +72,6 @@
     <!-- ================= HERO ================= -->
 
     <section id="hero" class="hero">
-
-      <span class="hero-streak hero-streak-1" aria-hidden="true"></span>
-      <span class="hero-streak hero-streak-2" aria-hidden="true"></span>
 
       <div class="hero-copy">
 
@@ -165,8 +84,8 @@
         </p>
 
         <h1 class="hero-title">
-          <span class="tone-bold">Engineering Parts.</span><br>
-          <span class="tone-bold gold">Built for Precision.</span>
+          Engineering Parts.<br>
+          <span class="tone-orange">Built for Precision.</span>
         </h1>
 
         <p class="hero-desc">
@@ -206,7 +125,7 @@
 
       <div class="stat">
         <span class="stat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="5" width="18" height="16" rx="1.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="16" rx="1.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
         </span>
         <span class="num">20</span>
         <span class="lbl">Years Industry Experience</span>
@@ -214,41 +133,27 @@
 
       <div class="stat">
         <span class="stat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg>
         </span>
-        <span class="num">40</span>
+        <span class="num">42</span>
         <span class="lbl">Products Listed</span>
       </div>
 
       <div class="stat">
         <span class="stat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="6"/><path d="m9 15-2 6 5-2 5 2-2-6"/></svg>
         </span>
-        <span class="num">8</span>
-        <span class="lbl">Product Categories</span>
+        <span class="num">Since 2006</span>
+        <span class="lbl">Established</span>
       </div>
 
       <div class="stat">
         <span class="stat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-7-6.3-7-11a7 7 0 1 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.3-7-11a7 7 0 1 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
         </span>
-        <span class="num">Kolkata</span>
-        <span class="lbl">Based in India</span>
+        <span class="num">Pan-India</span>
+        <span class="lbl">Dispatch</span>
       </div>
-
-    </section>
-
-
-    <!-- ================= CATEGORY GRID ================= -->
-
-    <section class="categories">
-
-      <div class="section-head">
-        <p class="eyebrow">Browse by Category</p>
-        <h2>Component Range</h2>
-      </div>
-
-      <div class="category-grid" id="categoryGrid"></div>
 
     </section>
 
@@ -260,19 +165,17 @@
       <div class="section-head">
         <p class="eyebrow">Industrial Components</p>
         <h2>Product Catalog</h2>
-      </div>
-
-      <div class="catalog-top">
-
-        <p class="catalog-desc">
+        <p class="section-description">
           Browse our industrial spare parts and machinery components.
           All enquiries and purchases are handled through IndiaMART's
           secure platform.
         </p>
+      </div>
 
+      <div class="catalog-top">
         <div class="search-box">
           <span class="search-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
           </span>
           <input
             type="search"
@@ -283,34 +186,20 @@
           <button id="clearSearch" class="clear-search" type="button" aria-label="Clear search">×</button>
         </div>
 
-      </div>
-
-      <div class="catalog-meta-top">
-        <span id="resultCount">Showing 40 products</span>
-      </div>
-
-      <div class="category-filters" id="categoryFilters">
-        <button class="filter-btn active" data-category="all">All Products</button>
-        <button class="filter-btn" data-category="cutting">Cutting Blades</button>
-        <button class="filter-btn" data-category="pins">Pins</button>
-        <button class="filter-btn" data-category="checking">Checking Blocks</button>
-        <button class="filter-btn" data-category="coupling">Couplings</button>
-        <button class="filter-btn" data-category="connecting">Connecting Rods</button>
-        <button class="filter-btn" data-category="shafts">Shafts</button>
-        <button class="filter-btn" data-category="electrical">Electricals</button>
-        <button class="filter-btn" data-category="machine">Machine Parts</button>
+        <span id="resultCount" class="catalog-count">Showing 42 products</span>
       </div>
 
       <div class="product-grid" id="productGrid"></div>
 
       <div id="noResults" class="no-results" hidden>
         <h3>No matching products</h3>
-        <p>Try another product name, machine name or category.</p>
+        <p>Try another product name, machine name or material.</p>
         <button class="btn btn-outline" id="resetSearch">Reset Search</button>
       </div>
 
     </section>
-    
+
+
     <!-- ================= BUY THROUGH INDIAMART ================= -->
 
     <section class="buy-im">
@@ -366,7 +255,7 @@
 
           <div class="why-card">
             <span class="why-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/></svg>
             </span>
             <h3>Precision Components</h3>
             <p>Industrial parts selected for demanding applications.</p>
@@ -374,7 +263,7 @@
 
           <div class="why-card">
             <span class="why-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="9" r="6"/><path d="m9 15-2 6 5-2 5 2-2-6"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="9" r="6"/><path d="m9 15-2 6 5-2 5 2-2-6"/></svg>
             </span>
             <h3>Established 2006</h3>
             <p>Serving industrial requirements for two decades.</p>
@@ -382,7 +271,7 @@
 
           <div class="why-card">
             <span class="why-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-6.3-7-11a7 7 0 1 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.3-7-11a7 7 0 1 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
             </span>
             <h3>Kolkata Based</h3>
             <p>Supplying industrial components from Kolkata, India.</p>
@@ -390,7 +279,7 @@
 
           <div class="why-card">
             <span class="why-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M21 12a8 8 0 1 1-3-6.2M21 4v5h-5"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12a8 8 0 1 1-3-6.2M21 4v5h-5"/></svg>
             </span>
             <h3>Direct Enquiry</h3>
             <p>Contact directly through IndiaMART for availability.</p>
@@ -466,7 +355,7 @@
 
           <div class="find-row">
             <span class="find-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-6.3-7-11a7 7 0 1 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.3-7-11a7 7 0 1 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
             </span>
             <div class="find-text">
               <span class="find-label">Address</span>
@@ -480,7 +369,7 @@
 
           <div class="find-row">
             <span class="find-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.7.6 2.5a2 2 0 0 1-.5 2.1L8 9.5a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.6.5 2.5.6a2 2 0 0 1 1.7 2Z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.7.6 2.5a2 2 0 0 1-.5 2.1L8 9.5a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.6.5 2.5.6a2 2 0 0 1 1.7 2Z"/></svg>
             </span>
             <div class="find-text">
               <span class="find-label">Phone (IndiaMART)</span>
@@ -490,7 +379,7 @@
 
           <div class="find-row">
             <span class="find-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
             </span>
             <div class="find-text">
               <span class="find-label">Storefront</span>
@@ -500,7 +389,7 @@
 
           <div class="find-row">
             <span class="find-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3 7 9 6 9-6"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3 7 9 6 9-6"/></svg>
             </span>
             <div class="find-text">
               <span class="find-label">Email</span>
@@ -556,7 +445,7 @@
   >
     <span class="float-text">Enquire via IndiaMART</span>
     <span class="float-icon">
-      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
         <path d="M7 17 17 7M9 7h8v8"/>
       </svg>
     </span>
@@ -576,23 +465,12 @@
       </div>
 
       <div class="footer-col">
-        <h4>Products</h4>
-        <a href="#catalog">Cutting Blades</a>
-        <a href="#catalog">Pins</a>
-        <a href="#catalog">Checking Blocks</a>
-        <a href="#catalog">Couplings</a>
-        <a href="#catalog">Connecting Rods</a>
-        <a href="#catalog">Shafts</a>
-        <a href="#catalog">Electricals</a>
-        <a href="#catalog">Machine Parts</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="#about">About Partsco</a>
+        <h4>Explore</h4>
+        <a href="#hero">Home</a>
+        <a href="#catalog">Catalog</a>
         <a href="#why">Applications</a>
+        <a href="#about">Company</a>
         <a href="#contact">Contact</a>
-        <a href="#contact">Find Us</a>
       </div>
 
       <div class="footer-col">
@@ -602,11 +480,20 @@
         <a href="https://www.indiamart.com/partsco-india/" target="_blank" rel="noopener" class="im-link">IndiaMART Storefront ↗</a>
       </div>
 
+      <div class="footer-col">
+        <h4>Location</h4>
+        <p class="footer-address">
+          Central Plaza, Room No. B5, 2nd Floor<br>
+          41, B. B. Ganguly Street<br>
+          Bowbazar, Kolkata – 700012
+        </p>
+      </div>
+
     </div>
 
     <div class="footer-bottom">
       <span>© 2026 Partsco India. All rights reserved.</span>
-      <span>Industrial Components · Kolkata</span>
+      <span>GSTIN 19AFBPN8197H1ZW · HSN 84314930</span>
     </div>
 
     <p class="footer-disclaimer">
